@@ -1,0 +1,42 @@
+ul {
+  position: relative;
+  transform: skewY(-15deg);
+}
+
+li {
+  position: relative;
+  list-style: none;
+  width: 120px;
+  background: #3e3f46;
+  padding: 15px;
+  z-index: calc(1 * var(--i));
+  transition: 0.5s;
+}
+
+li:hover {
+  background: #996fae;
+  transform: translateX(-50px);
+}
+
+li::before {
+  font-family: fontAwesome;
+  color: #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: attr(data-icon);
+  top: 0;
+  left: -40px;
+  width: 40px;
+  height: 100%;
+  background: #2e3133;
+  transform-origin: right;
+  transform: skewY(45deg);
+  transition: 0.5s;
+}
+
+li:hover::before {
+  background: #7b5190;
+}
+
+li: after;
