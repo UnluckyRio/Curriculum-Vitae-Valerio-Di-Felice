@@ -1,42 +1,121 @@
-ul {
-  position: relative;
-  transform: skewY(-15deg);
-}
-
-li {
-  position: relative;
-  list-style: none;
-  width: 120px;
-  background: #3e3f46;
-  padding: 15px;
-  z-index: calc(1 * var(--i));
-  transition: 0.5s;
-}
-
-li:hover {
-  background: #996fae;
-  transform: translateX(-50px);
-}
-
-li::before {
-  font-family: fontAwesome;
-  color: #999;
+body {
+  margin: 0;
+  padding: 0;
   display: flex;
+  flex-wrap: wrap;
+  place-items: center;
   justify-content: center;
   align-items: center;
-  content: attr(data-icon);
-  top: 0;
-  left: -40px;
-  width: 40px;
-  height: 100%;
-  background: #2e3133;
-  transform-origin: right;
-  transform: skewY(45deg);
-  transition: 0.5s;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  flex-direction: column;
 }
 
-li:hover::before {
-  background: #7b5190;
+body {
+  background: url(../img/wp7307871-mandala-art-wallpapers.jpg) center center;
+  animation: anim 1000s linear infinite;
 }
 
-li: after;
+@keyframes anim {
+  from {
+    background-position: 0% 0%;
+  }
+
+  to {
+    background-position: 0% -1500%;
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 6px 6px #00000033, 0 0 20px #0000001a;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+  gap: 25px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.effect {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  backdrop-filter: blur(3px);
+  filter: url(#glass-distortion);
+  overflow: hidden;
+}
+
+.tint {
+  z-index: 1;
+  position: absolute;
+  inset: 0;
+  background: #ffffff80;
+}
+
+.shine {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  box-shadow: inset 2px 2px 1px 0 #ffffff80, inset -1px -1px 1px 1px #ffffff80;
+}
+
+.text {
+  z-index: 3;
+  font-size: 2rem;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.dock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 2rem;
+  padding: 0.6rem;
+}
+
+.dock,
+.dock > div {
+  border-radius: 2rem;
+}
+
+.dock:hover {
+  padding: 0.8rem;
+  border-radius: 2.5rem;
+}
+
+.dock:hover > div {
+  border-radius: 2.5rem;
+}
+
+.dock img {
+  width: 75px;
+  padding: 0;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+  cursor: pointer;
+}
+
+.dock img:hover {
+  transform: scale(0.95);
+  transform-origin: center center;
+}
+
+/* Stili per l'immagine profilo - la rende stondata e centrata */
+.pro-pick {
+  border-radius: 100%; /* Rende l'immagine perfettamente circolare */
+  width: 100px; /* Dimensione più grande per l'immagine profilo */
+  height: 100px; /* Mantiene le proporzioni quadrate */
+  object-fit: cover; /* Assicura che l'immagine riempia il cerchio mantenendo le proporzioni */
+  display: block; /* Rimuove spazi extra */
+  margin: 0 auto; /* Centra l'immagine orizzontalmente */
+  cursor: default;
+}
