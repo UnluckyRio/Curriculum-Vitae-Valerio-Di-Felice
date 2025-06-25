@@ -4,120 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curriculum Vitae Valerio Di Felice - Home</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/img/0293e03d-a712-4db1-be79-874083e66790.png"
+    />
     <link rel="stylesheet" href="../assets/css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
+  <!-- Body -->
   <body>
     <!-- Header -->
     <header>
-      <div class="wrapper-pro-pick">
-        <div class="wrapper">
-          <div class="effect"></div>
-          <div class="tint"></div>
-          <div class="shine"></div>
-          <div class="text">
-            <div class="dock">
-              <p>
-                Curriculum Vitae <br />
-                Valerio Di Felice
-              </p>
-              <img
-                src="../assets/img/0293e03d-a712-4db1-be79-874083e66790.png"
-                class="pro-pick"
-                alt="Valerio Di Felice"
-              />
-            </div>
-          </div>
-        </div>
+      <div class="container-pro-pick">
+        <img
+          src="../assets/img/0293e03d-a712-4db1-be79-874083e66790.png"
+          class="pro-pick"
+          alt="Valerio Di Felice"
+        />
+        <h1>
+          Valerio Di Felice <br />
+          Curriculum Vitae
+        </h1>
       </div>
     </header>
     <!-- Main -->
     <main>
-      <div class="wrapper">
-        <div class="wrapper dock">
-          <div class="effect"></div>
-          <div class="tint"></div>
-          <div class="shine"></div>
-          <div class="text">
-            <div class="dock">
-              <img
-                src="https://codetheworld.io/wp-content/uploads/2025/06/finder.png"
-              />
-              <span>Home</span>
-              <img
-                src="https://codetheworld.io/wp-content/uploads/2025/06/map.png"
-              />
-              <span>About Me</span>
-              <img
-                src="https://codetheworld.io/wp-content/uploads/2025/06/messages.png"
-              />
-              <img
-                src="https://codetheworld.io/wp-content/uploads/2025/06/notes.png"
-              />
-              <img
-                src="https://codetheworld.io/wp-content/uploads/2025/06/safari.png"
-              />
-              <img
-                src="https://codetheworld.io/wp-content/uploads/2025/06/books.png"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <svg style="display: none">
-        <filter
-          id="glass-distortion"
-          x="0%"
-          y="0%"
-          width="100%"
-          height="100%"
-          filterUnits="objectBoundingBox"
-        >
-          <feTurbulence
-            type="fractalNoise"
-            baseFrequency="0.01 0.01"
-            numOctaves="1"
-            seed="5"
-            result="turbulence"
-          />
-
-          <feComponentTransfer in="turbulence" result="mapped">
-            <feFuncR type="gamma" amplitude="1" exponent="10" offset="0.5" />
-            <feFuncG type="gamma" amplitude="0" exponent="1" offset="0" />
-            <feFuncB type="gamma" amplitude="0" exponent="1" offset="0.5" />
-          </feComponentTransfer>
-
-          <feGaussianBlur in="turbulence" stdDeviation="3" result="softMap" />
-
-          <feSpecularLighting
-            in="softMap"
-            surfaceScale="5"
-            specularConstant="1"
-            specularExponent="100"
-            lighting-color="white"
-            result="specLight"
-          >
-            <fePointLight x="-200" y="-200" z="300" />
-          </feSpecularLighting>
-
-          <feComposite
-            in="specLight"
-            operator="arithmetic"
-            k1="0"
-            k2="1"
-            k3="1"
-            k4="0"
-            result="litImage"
-          />
-
-          <feDisplacementMap
-            in="SourceGraphic"
-            in2="softMap"
-            scale="150"
-            xChannelSelector="R"
-            yChannelSelector="G"
-          />
-        </filter>
-      </svg>
+      <nav>
+        <ul>
+          <li>
+            <a href="about-me.html">About me<i class="fas fa-user"></i></a>
+          </li>
+          <li>
+            <a href="portfolio.html"
+              >Portfolio<i class="fas fa-briefcase"></i
+            ></a>
+          </li>
+          <li>
+            <a href="skills.html">Skills<i class="fas fa-cogs"></i></a>
+          </li>
+          <li>
+            <a href="certifications.html"
+              >Certifications<i class="fas fa-award"></i
+            ></a>
+          </li>
+          <li>
+            <a href="contact-me.html"
+              >Contact me<i class="fas fa-envelope"></i
+            ></a>
+          </li>
+          <li>
+            <a href="socials.html">Socials<i class="fas fa-globe"></i></a>
+          </li>
+        </ul>
+      </nav>
     </main>
+    <!-- Footer -->
+    <footer>
+      <p>Copyright &copy; 2025 Valerio Di Felice</p>
+    </footer>
   </body>
 </html>
