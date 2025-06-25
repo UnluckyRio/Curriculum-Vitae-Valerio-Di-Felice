@@ -4,6 +4,214 @@
   font-family: "Noto Sans Georgian", sans-serif; /* Imposta il font per tutti gli elementi */
 }
 
+/* Keyframes per le animazioni */
+@keyframes fadeInUp {
+  from {
+    opacity: 0; /* Inizia trasparente */
+    transform: translateY(30px); /* Inizia 30px sotto */
+  }
+  to {
+    opacity: 1; /* Diventa visibile */
+    transform: translateY(0); /* Si sposta nella posizione finale */
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0; /* Inizia trasparente */
+    transform: translateX(-30px); /* Inizia 30px a sinistra */
+  }
+  to {
+    opacity: 1; /* Diventa visibile */
+    transform: translateX(0); /* Si sposta nella posizione finale */
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0; /* Inizia trasparente */
+    transform: translateX(30px); /* Inizia 30px a destra */
+  }
+  to {
+    opacity: 1; /* Diventa visibile */
+    transform: translateX(0); /* Si sposta nella posizione finale */
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Dimensione normale */
+  }
+  50% {
+    transform: scale(1.05); /* Leggermente più grande */
+  }
+  100% {
+    transform: scale(1); /* Torna alla dimensione normale */
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px); /* Posizione normale */
+  }
+  50% {
+    transform: translateY(-10px); /* Si solleva di 10px */
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); /* Ombra normale */
+  }
+  50% {
+    box-shadow: 0 0 20px 0 rgba(255, 215, 0, 0.6); /* Ombra dorata */
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0; /* Inizia trasparente */
+    transform: translateY(-50px); /* Inizia 50px sopra */
+  }
+  to {
+    opacity: 1; /* Diventa visibile */
+    transform: translateY(0); /* Si sposta nella posizione finale */
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0; /* Inizia trasparente */
+    transform: rotate(-180deg) scale(0.3); /* Ruota e scala */
+  }
+  to {
+    opacity: 1; /* Diventa visibile */
+    transform: rotate(0deg) scale(1); /* Posizione normale */
+  }
+}
+
+@keyframes animatedGradient {
+  0% {
+    background-position: 0% 50%; /* Inizia dalla posizione 0% */
+  }
+  25% {
+    background-position: 100% 50%; /* Si sposta al 100% */
+  }
+  50% {
+    background-position: 100% 100%; /* Va in basso a destra */
+  }
+  75% {
+    background-position: 0% 100%; /* Va in basso a sinistra */
+  }
+  100% {
+    background-position: 0% 50%; /* Torna alla posizione iniziale */
+  }
+}
+
+@keyframes shimmerGradient {
+  0% {
+    background: linear-gradient(
+      45deg,
+      transparent,
+      transparent,
+      transparent,
+      transparent
+    ); /* Inizia trasparente */
+    background-size: 200% 200%; /* Dimensione del gradiente */
+    background-position: 0% 100%; /* Inizia in basso a sinistra */
+  }
+  5% {
+    background: linear-gradient(
+      45deg,
+      transparent,
+      rgba(255, 215, 0, 0.05),
+      transparent,
+      transparent
+    ); /* Riflesso molto leggero che inizia */
+    background-size: 200% 200%; /* Dimensione del gradiente */
+    background-position: 5% 95%; /* Si sposta leggermente */
+  }
+  15% {
+    background: linear-gradient(
+      45deg,
+      transparent,
+      rgba(255, 215, 0, 0.15),
+      transparent,
+      transparent
+    ); /* Riflesso che inizia */
+    background-size: 200% 200%; /* Dimensione del gradiente */
+    background-position: 15% 85%; /* Si sposta leggermente */
+  }
+  30% {
+    background: linear-gradient(
+      45deg,
+      transparent,
+      rgba(255, 215, 0, 0.25),
+      transparent,
+      transparent
+    ); /* Riflesso che si intensifica */
+    background-size: 200% 200%; /* Dimensione del gradiente */
+    background-position: 30% 70%; /* Si sposta verso destra */
+  }
+  50% {
+    background: linear-gradient(
+      45deg,
+      transparent,
+      transparent,
+      rgba(255, 215, 0, 0.3),
+      transparent
+    ); /* Riflesso più intenso al centro */
+    background-size: 200% 200%; /* Dimensione del gradiente */
+    background-position: 50% 50%; /* Centro del percorso */
+  }
+  70% {
+    background: linear-gradient(
+      45deg,
+      transparent,
+      transparent,
+      transparent,
+      rgba(255, 215, 0, 0.25)
+    ); /* Riflesso che inizia a uscire */
+    background-size: 200% 200%; /* Dimensione del gradiente */
+    background-position: 70% 30%; /* Si sposta verso destra e in alto */
+  }
+  85% {
+    background: linear-gradient(
+      45deg,
+      transparent,
+      transparent,
+      transparent,
+      rgba(255, 215, 0, 0.15)
+    ); /* Riflesso che sta per uscire */
+    background-size: 200% 200%; /* Dimensione del gradiente */
+    background-position: 85% 15%; /* Quasi uscito di scena */
+  }
+  95% {
+    background: linear-gradient(
+      45deg,
+      transparent,
+      transparent,
+      transparent,
+      rgba(255, 215, 0, 0.05)
+    ); /* Riflesso molto debole che sta per scomparire */
+    background-size: 200% 200%; /* Dimensione del gradiente */
+    background-position: 95% 5%; /* Quasi completamente uscito */
+  }
+  100% {
+    background: linear-gradient(
+      45deg,
+      transparent,
+      transparent,
+      transparent,
+      transparent
+    ); /* Completamente uscito */
+    background-size: 200% 200%; /* Dimensione del gradiente */
+    background-position: 100% 0%; /* Uscito completamente di scena */
+  }
+}
+
 body {
   background-color: #3c3c3c; /* Colore di sfondo grigio scuro */
   min-height: 100vh; /* Altezza minima del 100% della viewport */
@@ -11,6 +219,30 @@ body {
   flex-direction: column; /* Direzione verticale */
   margin: 0; /* Rimuove i margini predefiniti */
   animation: fadeInUp 0.8s ease-out; /* Animazione di entrata per il body */
+  position: relative; /* Posizione relativa per gli effetti di sfondo */
+  overflow-x: hidden; /* Nasconde lo scroll orizzontale */
+}
+
+/* Effetto particelle di sfondo */
+body::before {
+  content: ""; /* Contenuto vuoto */
+  position: fixed; /* Posizione fissa */
+  top: 0; /* Attaccato in alto */
+  left: 0; /* Attaccato a sinistra */
+  width: 100%; /* Larghezza completa */
+  height: 100%; /* Altezza completa */
+  background: linear-gradient(
+    45deg,
+    transparent,
+    transparent,
+    transparent,
+    transparent
+  ); /* Gradiente trasparente iniziale */
+  background-size: 200% 200%; /* Dimensione del gradiente per l'animazione */
+  animation: shimmerGradient 15s ease-in-out infinite; /* Animazione più veloce per sovrapposizione */
+  pointer-events: none; /* Non interferisce con i click */
+  z-index: -1; /* Dietro al contenuto */
+  opacity: 0.25; /* Opacità aumentata per maggiore visibilità */
 }
 
 /* Nav */
@@ -21,6 +253,7 @@ nav {
   align-items: flex-start; /* Allinea in alto */
   /* margin-top: 2em; */ /* Rimosso per posizionare la navbar in alto */
   padding: 1em 0em 1em 0em; /* Padding ridotto a sinistra (top, right, bottom, left) */
+  animation: slideInFromTop 1s ease-out 0.3s both; /* Animazione di entrata dall'alto */
 }
 
 nav ul {
@@ -42,6 +275,12 @@ li {
   cursor: pointer; /* Cambia il cursore in pointer */
   user-select: none; /* Impedisce la selezione del testo */
   animation: fadeInUp 0.8s ease-out both; /* Animazione per ogni elemento della lista */
+  transition: transform 0.3s ease; /* Transizione per effetti hover */
+}
+
+/* Effetto hover per gli elementi della lista */
+li:hover {
+  transform: translateY(-3px); /* Si solleva leggermente al hover */
 }
 
 /* Animazione ritardata per ogni elemento della lista */
@@ -109,13 +348,15 @@ a:hover::before {
 a:hover {
   background-color: #000; /* Sfondo nero al hover */
   color: #fff; /* Testo bianco al hover */
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); /* Ombra al hover */
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); /* Ombra normale al hover */
   transform: scale(1.05) translateY(-2px); /* Effetto di sollevamento */
+  animation: pulse 0.6s ease-in-out; /* Animazione di pulsazione al hover */
 }
 
 /* Animazione per le icone */
 a i {
   transition: all 0.3s ease; /* Transizione fluida per tutti i cambiamenti */
+  animation: rotateIn 0.8s ease-out 2.5s both; /* Animazione di entrata per le icone */
 }
 
 a:hover i {
@@ -140,6 +381,40 @@ a:hover i {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); /* Ombra del container */
   max-width: 800px; /* Larghezza massima del container */
   width: 90%; /* Larghezza responsiva del 90% */
+  animation: fadeInUp 1s ease-out 0.8s both; /* Animazione di entrata ritardata */
+  transition: all 0.3s ease; /* Transizione per effetti hover */
+  position: relative; /* Posizione relativa per effetti */
+  overflow: hidden; /* Nasconde contenuto che esce */
+}
+
+/* Effetto hover per il container */
+.container-about-me:hover {
+  transform: translateY(-5px); /* Si solleva al hover */
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.7); /* Ombra più pronunciata */
+}
+
+/* Effetto di brillantezza per il container */
+.container-about-me::before {
+  content: ""; /* Contenuto vuoto */
+  position: absolute; /* Posizione assoluta */
+  top: -50%; /* Inizia sopra il container */
+  left: -50%; /* Inizia a sinistra del container */
+  width: 200%; /* Larghezza doppia */
+  height: 200%; /* Altezza doppia */
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 215, 0, 0.1),
+    transparent
+  ); /* Gradiente diagonale */
+  transform: rotate(45deg); /* Ruota il gradiente */
+  transition: all 0.6s ease; /* Transizione fluida */
+  opacity: 0; /* Inizia trasparente */
+}
+
+.container-about-me:hover::before {
+  opacity: 1; /* Diventa visibile al hover */
+  animation: float 2s ease-in-out infinite; /* Animazione di fluttuazione */
 }
 
 h1 {
@@ -150,7 +425,32 @@ h1 {
   margin-top: 0.5em; /* Spazio sopra il titolo */
   margin-bottom: 0.5em; /* Spazio sotto il titolo */
   text-align: center; /* Allinea il testo al centro */
-  animation: fadeInRight 1.2s ease-out 0.6s both; /* Animazione ritardata */
+  animation: fadeInRight 1.2s ease-out 1.2s both; /* Animazione ritardata */
+  position: relative; /* Posizione relativa per effetti */
+  transition: all 0.3s ease; /* Transizione per effetti hover */
+}
+
+/* Effetto hover per il titolo */
+h1:hover {
+  transform: scale(1.05); /* Si ingrandisce leggermente */
+  text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.3); /* Ombra dorata */
+}
+
+/* Effetto di sottolineatura animata per il titolo */
+h1::after {
+  content: ""; /* Contenuto vuoto */
+  position: absolute; /* Posizione assoluta */
+  bottom: -5px; /* Sotto il titolo */
+  left: 50%; /* Centrato orizzontalmente */
+  width: 0; /* Inizia con larghezza zero */
+  height: 3px; /* Altezza della linea */
+  background: linear-gradient(90deg, #ffd700, #ffed4e); /* Gradiente dorato */
+  transition: all 0.5s ease; /* Transizione fluida */
+  transform: translateX(-50%); /* Centra la linea */
+}
+
+h1:hover::after {
+  width: 80%; /* Espande la linea al hover */
 }
 
 p {
@@ -167,7 +467,34 @@ p {
   font-style: italic; /* Font in corsivo */
   font-size: 1.2em; /* Dimensione del font del testo */
   font-family: "Noto Sans Georgian", sans-serif; /* Font per il testo */
+  animation: fadeInLeft 1.2s ease-out 1.5s both; /* Animazione ritardata */
+  transition: all 0.3s ease; /* Transizione per effetti hover */
+  position: relative; /* Posizione relativa per effetti */
 }
+
+/* Effetto hover per il paragrafo */
+p:hover {
+  transform: translateX(5px); /* Si sposta leggermente a destra */
+  color: #333; /* Cambia leggermente il colore */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Ombra sottile */
+}
+
+/* Effetto di evidenziazione per il paragrafo */
+.container-about-me p::before {
+  content: ""; /* Contenuto vuoto */
+  position: absolute; /* Posizione assoluta */
+  left: -10px; /* A sinistra del testo */
+  top: 0; /* Allineato in alto */
+  width: 4px; /* Larghezza della barra */
+  height: 0; /* Inizia con altezza zero */
+  background: linear-gradient(180deg, #ffd700, #ffed4e); /* Gradiente dorato */
+  transition: all 0.4s ease; /* Transizione fluida */
+}
+
+.container-about-me p:hover::before {
+  height: 100%; /* Espande la barra al hover */
+}
+
 /* Footer */
 
 footer {
