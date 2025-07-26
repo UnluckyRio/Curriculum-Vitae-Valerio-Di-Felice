@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curriculum Vitae - Valerio Di Felice</title>
+
+    <!-- Font Google Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS tramite CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Configurazione Tailwind CSS per dark mode
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#eff6ff",
+                100: "#dbeafe",
+                200: "#bfdbfe",
+                300: "#93c5fd",
+                400: "#60a5fa",
+                500: "#3b82f6",
+                600: "#2563eb",
+                700: "#1d4ed8",
+                800: "#1e40af",
+                900: "#1e3a8a",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Stili personalizzati -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Font Awesome per le icone -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body
+    class="bg-gray-100 dark:bg-gray-900 font-sans leading-relaxed transition-colors duration-300"
+  >
+    <!-- Header con informazioni personali -->
+    <header
+      class="bg-white dark:bg-gray-800 shadow-lg transition-colors duration-300"
+    >
+      <div class="container mx-auto px-6 py-8">
+            <!-- Pulsante Portfolio in alto a destra -->
+            <button class="text-primary-600 hover:text-primary-700 border border-primary-600 hover:border-primary-700 hover:bg-primary-50 px-4 py-2 rounded-md font-medium transition-all duration-200 text-sm mb-4 ml-auto block">
+                <i class="fas fa-briefcase mr-2"></i>Portfolio
+            </button>
+        <div
+          class="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8"
+        >
+          <!-- Foto profilo -->
+          <div class="flex-shrink-0">
+            <img
+              src="./assets/img/0293e03d-a712-4db1-be79-874083e66790.png"
+              alt="Valerio Di Felice"
+              class="w-32 h-32 rounded-full object-cover border-4 border-primary-500 shadow-lg"
+            />
+          </div>
+
+          <!-- Informazioni personali -->
+          <div class="text-center md:text-left flex-grow">
+            <h1
+              class="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+            >
+              Valerio Di Felice
+            </h1>
+            <h2
+              class="text-xl text-primary-600 dark:text-primary-400 font-medium mb-4"
+            >
+              Sviluppatore Full Stack
+            </h2>
+
+            <!-- Contatti -->
+            <div
+              class="flex flex-wrap justify-center md:justify-start gap-4 text-gray-600 dark:text-gray-300"
+            >
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-envelope text-primary-500"></i>
+                <a href="mailto:valesmile.99@gmail.com" class="contact-link"
+                  >valesmile.99@gmail.com</a
+                >
+              </div>
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-phone text-primary-500"></i>
+                <span>+39 333 308 7911</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-map-marker-alt text-primary-500"></i>
+                <span>Roma, Italia</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <i class="fab fa-linkedin text-primary-500"></i>
+                <a
+                  href="https://www.linkedin.com/in/valerio-di-felice/?originalSubdomain=it"
+                  class="contact-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+              </div>
+              <div class="flex items-center space-x-2">
+                <i class="fab fa-github text-primary-500"></i>
+                <a
+                  href="https://github.com/UnluckyRio"
+                  class="contact-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Contenuto principale -->
+    <main class="container mx-auto px-6 py-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Colonna sinistra -->
+        <div class="lg:col-span-2 space-y-8">
+          <!-- Profilo Professionale -->
+          <section
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in transition-colors duration-300"
+          >
+            <h3 class="section-title">Profilo Professionale</h3>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        Ciao! Mi chiamo Valerio Di Felice e sono nato a Roma il 15/07/1999. Sono uno "Sviluppatore Full Stack" certificato da "EPICODE Institute of Technology" e con esperienza nella creazione di applicazioni web moderne e scalabili. Specializzato in diverse tecnologie sia in ambito Frontend che Backend. Sempre alla ricerca di nuove sfide tecnologiche e opportunità di crescita personale e professionale.
+                    </p>
+          </section>
+
+          <!-- Esperienza Lavorativa -->
+          <section
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in transition-colors duration-300"
+          >
+            <h3 class="section-title">Esperienza Lavorativa</h3>
+
+            <div class="experience-item">
+              <div class="flex justify-between items-start mb-2">
+                <h4
+                  class="text-lg font-semibold text-gray-800 dark:text-gray-100"
+                >
+                  Senior Full Stack Developer
+                </h4>
+                <span class="text-sm text-gray-500 font-medium"
+                  >2022 - Presente</span
+                >
+              </div>
+              <p
+                class="text-primary-600 dark:text-primary-400 font-medium mb-2"
+              >
+                TechCorp S.r.l. - Roma
+              </p>
+              <ul class="text-gray-700 dark:text-gray-300 space-y-1">
+                <li>• Sviluppo di applicazioni web con React e Node.js</li>
+                <li>• Implementazione di architetture microservizi</li>
+                <li>• Gestione team di 3 sviluppatori junior</li>
+                <li>• Ottimizzazione performance e scalabilità</li>
+              </ul>
+            </div>
+
+            <div class="experience-item">
+              <div class="flex justify-between items-start mb-2">
+                <h4
+                  class="text-lg font-semibold text-gray-800 dark:text-gray-100"
+                >
+                  Full Stack Developer
+                </h4>
+                <span class="text-sm text-gray-500 font-medium"
+                  >2020 - 2022</span
+                >
+              </div>
+              <p
+                class="text-primary-600 dark:text-primary-400 font-medium mb-2"
+              >
+                WebSolutions - Milano
+              </p>
+              <ul class="text-gray-700 dark:text-gray-300 space-y-1">
+                <li>• Sviluppo frontend con Vue.js e React</li>
+                <li>• API REST con Express.js e MongoDB</li>
+                <li>• Integrazione sistemi di pagamento</li>
+                <li>• Testing automatizzato con Jest</li>
+              </ul>
+            </div>
+
+            <div class="experience-item">
+              <div class="flex justify-between items-start mb-2">
+                <h4
+                  class="text-lg font-semibold text-gray-800 dark:text-gray-100"
+                >
+                  Junior Web Developer
+                </h4>
+                <span class="text-sm text-gray-500 font-medium"
+                  >2019 - 2020</span
+                >
+              </div>
+              <p
+                class="text-primary-600 dark:text-primary-400 font-medium mb-2"
+              >
+                StartupTech - Roma
+              </p>
+              <ul class="text-gray-700 dark:text-gray-300 space-y-1">
+                <li>• Sviluppo siti web responsive</li>
+                <li>• Manutenzione codice legacy</li>
+                <li>• Collaborazione con team UX/UI</li>
+                <li>• Ottimizzazione SEO</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Progetti -->
+          <section
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in transition-colors duration-300"
+          >
+            <h3 class="section-title">Progetti Principali</h3>
+
+            <div class="space-y-4">
+              <div class="border-l-4 border-green-500 pl-4">
+                <h4
+                  class="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-1"
+                >
+                  E-Commerce Platform
+                </h4>
+                <p class="text-gray-600 dark:text-gray-400 mb-2">
+                  Piattaforma e-commerce completa con gestione inventario e
+                  analytics
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="skill-tag">React</span>
+                  <span class="skill-tag">Node.js</span>
+                  <span class="skill-tag">MongoDB</span>
+                  <span class="skill-tag">Stripe</span>
+                </div>
+              </div>
+
+              <div class="border-l-4 border-blue-500 pl-4">
+                <h4
+                  class="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-1"
+                >
+                  Task Management App
+                </h4>
+                <p class="text-gray-600 dark:text-gray-400 mb-2">
+                  Applicazione per la gestione progetti con real-time
+                  collaboration
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="skill-tag">Vue.js</span>
+                  <span class="skill-tag">Socket.io</span>
+                  <span class="skill-tag">PostgreSQL</span>
+                  <span class="skill-tag">Docker</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Colonna destra -->
+        <div class="space-y-8">
+          <!-- Competenze Tecniche -->
+          <section
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in transition-colors duration-300"
+          >
+            <h3 class="section-title">Competenze Tecniche</h3>
+
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-semibold text-gray-800 dark:text-gray-100 mb-2">
+                  Frontend
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="skill-tag">HTML5</span>
+                  <span class="skill-tag">CSS</span>
+                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">Bootstrap5</span>
+                  <span class="skill-tag">Vite</span>
+                  <span class="skill-tag">React</span>
+                  <span class="skill-tag">Tailwind</span>
+                  <span class="skill-tag">Angular</span>
+                  <span class="skill-tag">Vue.js</span>
+                  <span class="skill-tag">SASS</span>
+                  <span class="skill-tag">TypeScript</span>
+                  <span class="skill-tag">Figma</span>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-gray-800 dark:text-gray-100 mb-2">
+                  Backend
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="skill-tag">Node.js</span>
+                  <span class="skill-tag">Express.js</span>
+                  <span class="skill-tag">Python</span>
+                  <span class="skill-tag">Django</span>
+                  <span class="skill-tag">FastAPI</span>
+                  <span class="skill-tag">PHP</span>
+                  <span class="skill-tag">Laravel</span>
+                  <span class="skill-tag">Java</span>
+                  <span class="skill-tag">Spring Boot</span>
+                  <span class="skill-tag">C#</span>
+                  <span class="skill-tag">.NET Core</span>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-gray-800 dark:text-gray-100 mb-2">
+                  Database
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="skill-tag">MongoDB</span>
+                  <span class="skill-tag">PostgreSQL</span>
+                  <span class="skill-tag">MySQL</span>
+                  <span class="skill-tag">Redis</span>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-gray-800 dark:text-gray-100 mb-2">
+                  Tools & DevOps
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="skill-tag">Git</span>
+                  <span class="skill-tag">Docker</span>
+                  <span class="skill-tag">AWS</span>
+                  <span class="skill-tag">Nginx</span>
+                  <span class="skill-tag">Jest</span>
+                  <span class="skill-tag">Webpack</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Formazione -->
+          <section
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in transition-colors duration-300"
+          >
+            <h3 class="section-title">Formazione</h3>
+
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-semibold text-gray-800 dark:text-gray-100">
+                  Laurea in Informatica
+                </h4>
+                <p class="text-primary-600 dark:text-primary-400 font-medium">
+                  Università La Sapienza
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                  2016 - 2019 | Voto: 110/110
+                </p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-gray-800 dark:text-gray-100">
+                  Diploma Tecnico Informatico
+                </h4>
+                <p class="text-primary-600 dark:text-primary-400 font-medium">
+                  ITIS G. Marconi
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                  2011 - 2016 | Voto: 95/100
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Certificazioni -->
+          <section
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in transition-colors duration-300"
+          >
+            <h3 class="section-title">Certificazioni</h3>
+
+            <div class="space-y-3">
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-certificate text-primary-500"></i>
+                <span class="text-gray-700 dark:text-gray-300"
+                  >AWS Certified Developer</span
+                >
+              </div>
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-certificate text-primary-500"></i>
+                <span class="text-gray-700 dark:text-gray-300"
+                  >MongoDB Certified Developer</span
+                >
+              </div>
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-certificate text-primary-500"></i>
+                <span class="text-gray-700 dark:text-gray-300"
+                  >Google Analytics Certified</span
+                >
+              </div>
+            </div>
+          </section>
+
+          <!-- Lingue -->
+          <section
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in transition-colors duration-300"
+          >
+            <h3 class="section-title">Lingue</h3>
+
+            <div class="space-y-3">
+              <div class="flex justify-between items-center">
+                <span class="text-gray-700 dark:text-gray-300 font-medium"
+                  >Italiano</span
+                >
+                <span class="text-sm text-gray-600 dark:text-gray-400"
+                  >Madrelingua</span
+                >
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-gray-700 dark:text-gray-300 font-medium"
+                  >Inglese</span
+                >
+                <span class="text-sm text-gray-600 dark:text-gray-400"
+                  >Fluente (C1)</span
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="bg-gray-800 dark:bg-gray-900 text-white py-6 mt-12 transition-colors duration-300"
+    >
+      <div class="container mx-auto px-6 text-center">
+        <p class="text-gray-300 dark:text-gray-400">
+          © 2024 Valerio Di Felice. Tutti i diritti riservati.
+        </p>
+        <p class="text-gray-400 dark:text-gray-500 text-sm mt-2">
+          Curriculum creato con Vite e Tailwind CSS
+        </p>
+      </div>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="./script/script.js"></script>
+  </body>
+</html>

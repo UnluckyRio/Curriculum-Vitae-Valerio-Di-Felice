@@ -1,0 +1,72 @@
+/* Stili personalizzati per il curriculum vitae */
+/* Tailwind CSS sarà caricato tramite CDN nell'HTML */
+
+/* Stili personalizzati per il curriculum */
+@layer components {
+  .section-title {
+    @apply text-2xl font-bold text-gray-800 dark:text-white mb-4 border-b-2 border-primary-500 dark:border-primary-400 pb-2;
+  }
+
+  /* Miglioramenti aggiuntivi per la visibilità degli h3 nella modalità scura */
+  .dark .section-title {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    font-weight: 800;
+    color: #ffffff !important;
+  }
+
+  .skill-tag {
+    @apply inline-block bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2;
+  }
+
+  .experience-item {
+    @apply mb-6 p-4 border-l-4 border-primary-500 dark:border-primary-400 bg-gray-50 dark:bg-gray-800 rounded-r-lg;
+  }
+
+  .contact-link {
+    @apply text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 transition-colors duration-200;
+  }
+}
+
+/* Miglioramenti per la visibilità del testo nella modalità scura */
+@layer utilities {
+  /* Sovrascrive i colori di testo grigi per migliorare la visibilità nella modalità scura */
+  .dark .text-gray-500 {
+    color: #9ca3af !important; /* gray-400 - più chiaro */
+  }
+
+  .dark .text-gray-600 {
+    color: #d1d5db !important; /* gray-300 - molto più chiaro */
+  }
+
+  .dark .text-gray-700 {
+    color: #e5e7eb !important; /* gray-200 - ancora più chiaro */
+  }
+
+  /* Rende tutti gli span bianchi nella modalità scura */
+  .dark span {
+    color: #ffffff !important;
+  }
+
+  /* Eccezioni per span con classi specifiche che devono mantenere i loro colori */
+  .dark span.skill-tag {
+    color: #ffffff !important;
+  }
+}
+
+/* Animazioni personalizzate */
+@layer utilities {
+  .fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
