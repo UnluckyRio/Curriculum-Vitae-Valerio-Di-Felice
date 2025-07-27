@@ -59,13 +59,6 @@
       class="bg-white dark:bg-gray-800 shadow-lg transition-colors duration-300"
     >
       <div class="container mx-auto px-6 py-8">
-        <!-- Pulsante Portfolio in alto a destra -->
-        <a
-          href="portfolio.html"
-          class="text-primary-600 hover:text-primary-700 border border-primary-600 hover:border-primary-700 hover:bg-primary-50 px-4 py-2 rounded-md font-medium transition-all duration-200 text-sm mb-4 ml-auto block w-fit"
-        >
-          <i class="fas fa-briefcase mr-2"></i>Portfolio
-        </a>
         <div
           class="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8"
         >
@@ -80,11 +73,21 @@
 
           <!-- Informazioni personali -->
           <div class="text-center md:text-left flex-grow">
-            <h1
-              class="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-2"
-            >
-              Valerio Di Felice
-            </h1>
+            <!-- Header con nome e pulsante Portfolio -->
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+              <h1
+                class="text-4xl font-bold text-gray-800 dark:text-gray-100"
+              >
+                Valerio Di Felice
+              </h1>
+              <!-- Pulsante Portfolio allineato a destra -->
+              <a
+                href="portfolio.html"
+                class="text-primary-600 hover:text-primary-700 border border-primary-600 hover:border-primary-700 hover:bg-primary-50 px-4 py-2 rounded-md font-medium transition-all duration-200 text-sm mt-2 md:mt-0 w-fit mx-auto md:mx-0"
+              >
+                <i class="fas fa-briefcase mr-2"></i>Portfolio
+              </a>
+            </div>
             <h2
               class="text-xl text-primary-600 dark:text-primary-400 font-medium mb-4"
             >
@@ -167,16 +170,44 @@
                 <h4
                   class="text-lg font-semibold text-gray-800 dark:text-gray-100"
                 >
-                  Senior Full Stack Developer
+                  Operatore telefonico InBound e BackOffice per conto di Tim Business S.p.A.
                 </h4>
                 <span class="text-sm text-gray-500 font-medium"
-                  >2022 - Presente</span
+                  >2022 - 2025</span
                 >
               </div>
               <p
                 class="text-primary-600 dark:text-primary-400 font-medium mb-2"
               >
-                TechCorp S.r.l. - Roma
+                Gruppo Distribuzione S.p.A. - Roma
+              </p>
+              <ul class="text-gray-700 dark:text-gray-300 space-y-1">
+                <li>• Gestione chiamate clienti </li>
+                <li>• Assistenza Tecnica di Primo Livello </li>
+                <li>• Gestione reclami </li>
+                <li>• Assistenza commerciale e amministrativa </li>
+                <li>• Gestione pratiche complesse </li>
+                <li>• Aggiornamento dati cliente </li>
+                <li>• Verifica e analisi documentale </li>
+                <li>• Ricerca e risoluzione problemi </li>
+              </ul>
+            </div>
+
+             <div class="experience-item">
+              <div class="flex justify-between items-start mb-2">
+                <h4
+                  class="text-lg font-semibold text-gray-800 dark:text-gray-100"
+                >
+                  Master in Full-Stack Development & AI
+                </h4>
+                <span class="text-sm text-gray-500 font-medium"
+                  >2025 - 2026</span
+                >
+              </div>
+              <p
+                class="text-primary-600 dark:text-primary-400 font-medium mb-2"
+              >
+                EPICODE - Institute of Technology - Roma
               </p>
               <ul class="text-gray-700 dark:text-gray-300 space-y-1">
                 <li>• Sviluppo di applicazioni web con React e Node.js</li>
@@ -185,55 +216,7 @@
                 <li>• Ottimizzazione performance e scalabilità</li>
               </ul>
             </div>
-
-            <div class="experience-item">
-              <div class="flex justify-between items-start mb-2">
-                <h4
-                  class="text-lg font-semibold text-gray-800 dark:text-gray-100"
-                >
-                  Full Stack Developer
-                </h4>
-                <span class="text-sm text-gray-500 font-medium"
-                  >2020 - 2022</span
-                >
-              </div>
-              <p
-                class="text-primary-600 dark:text-primary-400 font-medium mb-2"
-              >
-                WebSolutions - Milano
-              </p>
-              <ul class="text-gray-700 dark:text-gray-300 space-y-1">
-                <li>• Sviluppo frontend con Vue.js e React</li>
-                <li>• API REST con Express.js e MongoDB</li>
-                <li>• Integrazione sistemi di pagamento</li>
-                <li>• Testing automatizzato con Jest</li>
-              </ul>
-            </div>
-
-            <div class="experience-item">
-              <div class="flex justify-between items-start mb-2">
-                <h4
-                  class="text-lg font-semibold text-gray-800 dark:text-gray-100"
-                >
-                  Junior Web Developer
-                </h4>
-                <span class="text-sm text-gray-500 font-medium"
-                  >2019 - 2020</span
-                >
-              </div>
-              <p
-                class="text-primary-600 dark:text-primary-400 font-medium mb-2"
-              >
-                StartupTech - Roma
-              </p>
-              <ul class="text-gray-700 dark:text-gray-300 space-y-1">
-                <li>• Sviluppo siti web responsive</li>
-                <li>• Manutenzione codice legacy</li>
-                <li>• Collaborazione con team UX/UI</li>
-                <li>• Ottimizzazione SEO</li>
-              </ul>
-            </div>
-          </section>
+           
 
           <!-- Progetti -->
           <section
