@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Sfondo circolare -->
+  <circle cx="16" cy="16" r="15" fill="#2563eb" stroke="#1d4ed8" stroke-width="2"/>
+  
+  <!-- Lettera V stilizzata -->
+  <path d="M8 10 L12 22 L16 14 L20 22 L24 10" 
+        stroke="white" 
+        stroke-width="2.5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        fill="none"/>
+  
+  <!-- Punto decorativo -->
+  <circle cx="16" cy="26" r="1.5" fill="white"/>
+</svg>

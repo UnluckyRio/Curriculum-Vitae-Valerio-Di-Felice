@@ -82,6 +82,11 @@ function initSkillHover() {
  * Aggiunge funzionalità di stampa
  */
 function initPrintFunction() {
+    // Non creare il pulsante stampa nella pagina portfolio
+    if (window.location.pathname.includes('portfolio.html')) {
+        return;
+    }
+    
     // Crea un pulsante per la stampa
     const printButton = document.createElement('button');
     printButton.innerHTML = '<i class="fas fa-print"></i> Stampa CV';
@@ -98,16 +103,24 @@ function initPrintFunction() {
  * Aggiunge toggle per tema scuro/chiaro
  */
 function initThemeToggle() {
+    // Controlla se il tema scuro è già attivo
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    if (isDarkMode) {
+        document.documentElement.classList.add('dark');
+    }
+    
+    // Non creare il pulsante floating nella pagina portfolio
+    if (window.location.pathname.includes('portfolio.html')) {
+        return;
+    }
+    
     // Crea il pulsante per il toggle del tema
     const themeToggle = document.createElement('button');
     themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
     themeToggle.className = 'fixed bottom-6 left-6 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-200 print:hidden';
     themeToggle.setAttribute('aria-label', 'Toggle tema scuro');
     
-    // Controlla se il tema scuro è già attivo
-    const isDarkMode = localStorage.getItem('darkMode') === 'true';
     if (isDarkMode) {
-        document.documentElement.classList.add('dark');
         themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
     }
     
