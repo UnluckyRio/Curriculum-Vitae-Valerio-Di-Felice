@@ -296,8 +296,8 @@
               Game Design
             </h3>
             <p class="text-gray-600 dark:text-gray-300 mb-4">
-              Videogioco 2D mobile (Android) e desktop creato con Engine "Godot"
-              e "Android Studio" nel linguaggio GDScript con sistema di
+              Videogioco 2D mobile (Android) e desktop creato con l'Engine
+              "Godot" e "Android Studio" nel linguaggio GDScript con sistema di
               rendering, fisica e gestione degli assets.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
@@ -357,6 +357,12 @@
     <script>
       // Script specifico per la pagina portfolio
       document.addEventListener("DOMContentLoaded", function () {
+        // Carica le preferenze del tema dal localStorage
+        const isDarkMode = localStorage.getItem("darkMode") === "true";
+        if (isDarkMode) {
+          document.documentElement.classList.add("dark");
+        }
+
         const themeTogglePortfolio = document.getElementById(
           "theme-toggle-portfolio"
         );
