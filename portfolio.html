@@ -2,10 +2,10 @@
 <html lang="it">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Valerio Di Felice</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       // Configurazione Tailwind per modalità scura
@@ -293,16 +293,17 @@
           </div>
           <div class="p-6">
             <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">
-              Game Engine
+              Game Design
             </h3>
             <p class="text-gray-600 dark:text-gray-300 mb-4">
-              Motore di gioco 2D sviluppato in C++ con sistema di rendering,
-              fisica e gestione degli asset.
+              Videogioco 2D mobile (Android) e desktop creato con Engine "Godot"
+              e "Android Studio" nel linguaggio GDScript con sistema di
+              rendering, fisica e gestione degli assets.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="skill-tag">C++</span>
-              <span class="skill-tag">OpenGL</span>
-              <span class="skill-tag">SDL2</span>
+              <span class="skill-tag">Godot</span>
+              <span class="skill-tag">GDScript</span>
+              <span class="skill-tag">Android Studio</span>
             </div>
             <div class="flex space-x-3">
               <a
@@ -355,19 +356,21 @@
     <script src="script/script.js"></script>
     <script>
       // Script specifico per la pagina portfolio
-      document.addEventListener('DOMContentLoaded', function() {
-        const themeTogglePortfolio = document.getElementById('theme-toggle-portfolio');
-        
+      document.addEventListener("DOMContentLoaded", function () {
+        const themeTogglePortfolio = document.getElementById(
+          "theme-toggle-portfolio"
+        );
+
         if (themeTogglePortfolio) {
-          themeTogglePortfolio.addEventListener('click', function() {
-            const isDark = document.documentElement.classList.contains('dark');
-            
+          themeTogglePortfolio.addEventListener("click", function () {
+            const isDark = document.documentElement.classList.contains("dark");
+
             if (isDark) {
-              document.documentElement.classList.remove('dark');
-              localStorage.setItem('darkMode', 'false');
+              document.documentElement.classList.remove("dark");
+              localStorage.setItem("darkMode", "false");
             } else {
-              document.documentElement.classList.add('dark');
-              localStorage.setItem('darkMode', 'true');
+              document.documentElement.classList.add("dark");
+              localStorage.setItem("darkMode", "true");
             }
           });
         }
