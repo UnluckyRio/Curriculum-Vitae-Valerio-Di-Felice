@@ -6,7 +6,7 @@
 /** @type {string} */
 const CACHE_VERSION = '1753637599|9065585045';
 /** @type {string} */
-const CACHE_PREFIX = 'Foxy's Forest Da-sw-cache-';
+const CACHE_PREFIX = 'Foxy\'s Forest Da-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
 /** @type {string} */
 const OFFLINE_URL = 'Foxy Dash.offline.html';
