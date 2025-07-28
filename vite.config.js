@@ -4,6 +4,9 @@ import autoprefixer from 'autoprefixer';
 
 // Configurazione Vite per il progetto Curriculum Vitae
 export default defineConfig({
+  // Base path per GitHub Pages (cambia 'Curriculum-Vitae-Valerio-Di-Felice' con il nome del tuo repository)
+  base: process.env.NODE_ENV === 'production' ? '/Curriculum-Vitae-Valerio-Di-Felice/' : '/',
+  
   // Directory di base per il progetto
   root: '.',
   
