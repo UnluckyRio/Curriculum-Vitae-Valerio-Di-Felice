@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
+import { resolve } from 'path';
 
 // Configurazione Vite per il progetto Curriculum Vitae
 export default defineConfig({
@@ -17,14 +18,20 @@ export default defineConfig({
     // Ottimizzazione per la produzione
     minify: 'terser',
     sourcemap: false,
-    // Configurazione per i chunk
+    // Configurazione per i chunk e multi-page
     rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        portfolio: resolve(__dirname, 'portfolio.html')
+      },
       output: {
         manualChunks: {
           vendor: ['tailwindcss']
         }
       }
-    }
+    },
+    // Copia file aggiuntivi
+    copyPublicDir: true
   },
   
   // Server di sviluppo
@@ -49,6 +56,9 @@ export default defineConfig({
       ],
     },
   },
+  
+  // Directory pubblica per file statici
+  publicDir: 'public',
   
   // Plugin configuration
   plugins: [],
