@@ -1,6 +1,9 @@
-/* Stili personalizzati per il curriculum vitae */
-/* Tailwind CSS sarà caricato tramite CDN nell'HTML */
+/* Importazione di Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* Stili personalizzati per il curriculum vitae */
 /* Stili personalizzati per il curriculum */
 @layer components {
   .section-title {

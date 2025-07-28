@@ -10,31 +10,7 @@
       type="image/svg+xml"
       href="assets/img/curriculum-vitae-portable-network-graphics-clip-art-r-sum-png-favpng-HNwCehHvBteCwFg2bFQumkxjT.jpg"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      // Configurazione Tailwind per modalità scura
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: {
-                50: "#eff6ff",
-                100: "#dbeafe",
-                200: "#bfdbfe",
-                300: "#93c5fd",
-                400: "#60a5fa",
-                500: "#3b82f6",
-                600: "#2563eb",
-                700: "#1d4ed8",
-                800: "#1e40af",
-                900: "#1e3a8a",
-              },
-            },
-          },
-        },
-      };
-    </script>
+    <!-- Tailwind CSS e stili personalizzati -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link
       rel="stylesheet"
@@ -68,8 +44,7 @@
               class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-200"
               aria-label="Toggle tema scuro"
             >
-              <i class="fas fa-moon dark:hidden"></i>
-              <i class="fas fa-sun hidden dark:inline"></i>
+              <i class="fas fa-moon"></i>
             </button>
           </nav>
         </div>
@@ -91,7 +66,43 @@
 
       <!-- Griglia dei progetti -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Progetto 1 -->
+        <!-- Progetto 1 - Game Design -->
+        <div
+          class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+        >
+          <div
+            class="h-48 bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center"
+          >
+            <i class="fas fa-gamepad text-white text-4xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">
+              Game Design
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              "Foxy Dash" é un Videogioco 2D Mobile, Desktop e Browser
+              sviluppato con "Godot Engine" e "Android Studio" nel linguaggio
+              GDScript. Puoi provarlo direttamente dal tuo browser cliccando sul
+              link "Demo".
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="skill-tag">Godot</span>
+              <span class="skill-tag">GDScript</span>
+              <span class="skill-tag">Android Studio</span>
+            </div>
+            <div class="flex space-x-3">
+              <a
+                href="Foxy Dash HTML/Foxy Dash.html"
+                target="_blank"
+                class="text-primary-600 dark:text-primary-400 hover:underline"
+              >
+                <i class="fas fa-external-link-alt mr-1"></i>Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Progetto 2 - Web App -->
         <div
           class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
@@ -130,7 +141,7 @@
           </div>
         </div>
 
-        <!-- Progetto 2 -->
+        <!-- Progetto 3 -->
         <div
           class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
@@ -169,14 +180,14 @@
           </div>
         </div>
 
-        <!-- Progetto 3 -->
+        <!-- Progetto 4 -->
         <div
           class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
           <div
             class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center"
           >
-            <i class="fas fa-chart-line text-white text-4xl"></i>
+            <i class="fas fa-chart-bar text-white text-4xl"></i>
           </div>
           <div class="p-6">
             <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">
@@ -208,7 +219,7 @@
           </div>
         </div>
 
-        <!-- Progetto 4 -->
+        <!-- Progetto 5 -->
         <div
           class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
@@ -247,7 +258,7 @@
           </div>
         </div>
 
-        <!-- Progetto 5 -->
+        <!-- Progetto 6 -->
         <div
           class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
@@ -286,41 +297,7 @@
           </div>
         </div>
 
-        <!-- Progetto 6 -->
-        <div
-          class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-        >
-          <div
-            class="h-48 bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center"
-          >
-            <i class="fas fa-gamepad text-white text-4xl"></i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">
-              Game Design
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              "Foxy Dash" é un Videogioco 2D Mobile, Desktop e Browser creato
-              con l'Engine di gioco "Godot" e "Android Studio" nel linguaggio
-              GDScript. Puoi provarlo direttamente dal tuo browser cliccando sul
-              link Demo.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="skill-tag">Godot</span>
-              <span class="skill-tag">GDScript</span>
-              <span class="skill-tag">Android Studio</span>
-            </div>
-            <div class="flex space-x-3">
-              <a
-                href="Foxy Dash HTML/Foxy Dash.html"
-                target="_blank"
-                class="text-primary-600 dark:text-primary-400 hover:underline"
-              >
-                <i class="fas fa-external-link-alt mr-1"></i>Demo
-              </a>
-            </div>
-          </div>
-        </div>
+
       </div>
 
       <!-- Sezione contatti -->
@@ -366,17 +343,29 @@
         const themeTogglePortfolio = document.getElementById(
           "theme-toggle-portfolio"
         );
+        const themeIcon = themeTogglePortfolio.querySelector("i");
+
+        // Imposta l'icona iniziale in base al tema corrente
+        if (isDarkMode) {
+          themeIcon.className = "fas fa-sun";
+        } else {
+          themeIcon.className = "fas fa-moon";
+        }
 
         if (themeTogglePortfolio) {
           themeTogglePortfolio.addEventListener("click", function () {
             const isDark = document.documentElement.classList.contains("dark");
 
             if (isDark) {
+              // Passa al tema chiaro
               document.documentElement.classList.remove("dark");
               localStorage.setItem("darkMode", "false");
+              themeIcon.className = "fas fa-moon"; // Mostra icona luna per attivare tema scuro
             } else {
+              // Passa al tema scuro
               document.documentElement.classList.add("dark");
               localStorage.setItem("darkMode", "true");
+              themeIcon.className = "fas fa-sun"; // Mostra icona sole per attivare tema chiaro
             }
           });
         }

@@ -1,4 +1,6 @@
 import { defineConfig } from 'vite';
+import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
 
 // Configurazione Vite per il progetto Curriculum Vitae
 export default defineConfig({
@@ -37,7 +39,12 @@ export default defineConfig({
   
   // CSS configuration
   css: {
-    // Nessuna configurazione PostCSS necessaria
+    postcss: {
+      plugins: [
+        tailwindcss,
+        autoprefixer,
+      ],
+    },
   },
   
   // Plugin configuration
