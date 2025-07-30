@@ -160,7 +160,7 @@ Il sito è ottimizzato per:
 
 ## 📞 Contatti
 
-- **Email**: valesmile.99@gmail.com
+- **Email**: valeriodifelice.dev@gmail.com
 - **LinkedIn**: [Valerio Di Felice](https://www.linkedin.com/in/valerio-di-felice/?originalSubdomain=it)
 - **GitHub**: [UnluckyRio](https://github.com/UnluckyRio)
 
