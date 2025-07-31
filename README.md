@@ -56,6 +56,11 @@ Sito web professionale che presenta il curriculum vitae di Valerio Di Felice, sv
 - Completamente integrato nel sito
 - Accessibile dalla sezione portfolio
 
+### Gioco Integrato
+- **Ordis AI**: Chatbot sviluppato con Botpress
+- Completamente integrato nel sito
+- Accessibile dalla sezione portfolio
+
 ## 📁 Struttura del Progetto
 
 ```
