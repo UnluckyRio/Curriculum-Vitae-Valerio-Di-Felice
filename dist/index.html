@@ -22,7 +22,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" crossorigin href="/Curriculum-Vitae-Valerio-Di-Felice/assets/style-p3PaPbXu.css">
+    <link rel="stylesheet" crossorigin href="/Curriculum-Vitae-Valerio-Di-Felice/assets/style-lIhhBwuX.css">
   </head>
   <body
     class="bg-gray-100 dark:bg-gray-900 font-sans leading-relaxed transition-colors duration-300"
@@ -431,5 +431,174 @@
 
     <!-- Script JavaScript -->
     <script src="./script/script.js"></script>
+    
+    <!-- Script Botpress Webchat -->
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script>
+      let webchatInitialized = false;
+      
+      // Funzione per inizializzare la webchat
+      function initializeWebchat() {
+        if (!webchatInitialized) {
+          window.botpress.init({
+            "composerPlaceholder": "Scrivi il tuo messaggio...",
+            "botConversationDescription": "Questo chatbot può aiutarti a conoscere meglio Valerio Di Felice e le sue competenze professionali.",
+            "botId": "41d1e2a6-1d58-4b12-b761-11204ddae018",
+            "hostUrl": "https://cdn.botpress.cloud/webchat/v2.2",
+            "messagingUrl": "https://messaging.botpress.cloud",
+            "botName": "Valerio Di Felice AI Assistant",
+            "stylesheet": "https://webchat-styler-css.botpress.app/prod/41d1e2a6-1d58-4b12-b761-11204ddae018/v95738/style.css",
+            "frontendVersion": "v2.2",
+            "useSessionStorage": true,
+            "theme": "prism",
+            "themeColor": "#2563eb",
+            "allowedOrigins": [],
+            "showPoweredBy": true,
+            "className": "webchatIframe",
+            "containerWidth": "100%25",
+            "layoutWidth": "100%25",
+            "hideWidget": true,
+            "showCloseButton": false,
+            "disableAnimations": false,
+            "closeOnEscape": false,
+            "showConversationsButton": false,
+            "enableTranscriptDownload": false,
+            "googleFonts": ["https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"],
+            "emailIntegration": {
+              "title": "Invia via email",
+              "link": "mailto:valerio.difelice@example.com?subject=Conversazione%20Chatbot&body={conversation}"
+            },
+            "phoneIntegration": {
+              "title": "+39 3333087911",
+              "link": "+39 3333087911"
+            },
+            "termsOfService": {
+              "title": "Terms of service",
+              "link": "https://unluckyrio.github.io/Curriculum-Vitae-Valerio-Di-Felice/index.html"
+            },
+            "privacyPolicy": {
+              "title": "Privacy policy",
+              "link": "https://unluckyrio.github.io/Curriculum-Vitae-Valerio-Di-Felice/index.html"
+            },
+            "color": "#3276EA",
+            "variant": "solid",
+            "headerVariant": "glass",
+            "themeMode": "light",
+            "fontFamily": "rubik",
+            "radius": 4,
+            "feedbackEnabled": true,
+            "footer": "[⚡ by Botpress](https://botpress.com/?from=webchat)"
+          },
+          {
+            "clientId": "41d1e2a6-1d58-4b12-b761-11204ddae018"
+          });
+          webchatInitialized = true;
+        }
+      }
+      
+      // Funzione per creare il pulsante di chiusura
+      function createCloseButton() {
+        const closeButton = document.createElement('div');
+        closeButton.id = 'webchat-close-btn';
+        closeButton.innerHTML = '×';
+        closeButton.style.cssText = `
+          position: fixed;
+          bottom: 90px;
+          right: 25px;
+          width: 20px;
+          height: 20px;
+          background-color: #ff4444;
+          color: white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 14px;
+          font-weight: bold;
+          cursor: pointer;
+          z-index: 10000;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+          transition: all 0.3s ease;
+          display: none;
+        `;
+        
+        // Hover effect
+        closeButton.addEventListener('mouseenter', function() {
+          this.style.backgroundColor = '#cc0000';
+          this.style.transform = 'scale(1.2)';
+        });
+        
+        closeButton.addEventListener('mouseleave', function() {
+          this.style.backgroundColor = '#ff4444';
+          this.style.transform = 'scale(1)';
+        });
+        
+        // Click event per chiudere completamente la webchat
+        closeButton.addEventListener('click', function() {
+          if (window.botpress && window.botpress.close) {
+            window.botpress.close();
+          }
+          
+          // Rimuovi completamente tutti gli elementi della webchat
+          setTimeout(() => {
+            // Rimuovi iframe Botpress (incluso FAB e tutti i tipi)
+            const webchatIframes = document.querySelectorAll('iframe[src*="botpress"], iframe[id*="botpress"], iframe[class*="botpress"], iframe[class*="bpFab"], iframe[name="fab"], iframe[title="Botpress"]');
+            webchatIframes.forEach(iframe => iframe.remove());
+            
+            // Rimuovi eventuali container della webchat
+            const webchatContainers = document.querySelectorAll('[id*="botpress"], [class*="botpress"], [class*="bpFab"], [data-botpress]');
+            webchatContainers.forEach(container => {
+              if (container !== closeButton) {
+                container.remove();
+              }
+            });
+            
+            // Reset dello stato di inizializzazione per permettere la riapertura
+            webchatInitialized = false;
+          }, 100);
+          
+          this.style.display = 'none';
+        });
+        
+        document.body.appendChild(closeButton);
+        return closeButton;
+      }
+      
+      // Aggiungi event listener per i link Demo
+      document.addEventListener('DOMContentLoaded', function() {
+        const closeButton = createCloseButton();
+        
+        const demoLinks = document.querySelectorAll('a[href="#"]');
+        demoLinks.forEach(link => {
+          if (link.textContent.trim().includes('Demo')) {
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              initializeWebchat();
+              
+              // Funzione per tentare l'apertura della webchat con retry
+              function attemptOpenWebchat(attempts = 0) {
+                if (attempts > 10) {
+                  console.log('Impossibile aprire la webchat dopo 10 tentativi');
+                  return;
+                }
+                
+                if (window.botpress && window.botpress.open) {
+                  window.botpress.open();
+                  // Mostra il pulsante di chiusura quando la webchat è aperta
+                  closeButton.style.display = 'flex';
+                  console.log('Webchat aperta con successo');
+                } else {
+                  // Riprova dopo 200ms
+                  setTimeout(() => attemptOpenWebchat(attempts + 1), 200);
+                }
+              }
+              
+              // Inizia i tentativi di apertura dopo un breve delay
+              setTimeout(() => attemptOpenWebchat(), 300);
+            });
+          }
+        });
+      });
+    </script>
   </body>
 </html>
